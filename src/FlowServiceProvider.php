@@ -27,6 +27,8 @@ class FlowServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        //
+		$this->app->singleton(Flow::class, function ($app) {
+			return new Flow(config('flow'));
+		});
     }
 }
