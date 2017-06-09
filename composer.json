@@ -1,0 +1,22 @@
+{
+    "name": "friendemic/flow",
+    "description": "A Laravel package for Symfony's Workflow.",
+    "keywords": ["workflow", "symfony", "laravel"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Joseph Niu",
+            "email": "joe@friendemic.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+	    "php": ">=5.5.9",
+        "symfony/workflow": "^3.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "Friendemic\\Flow\\": "src/"
+        }
+    }
+}
