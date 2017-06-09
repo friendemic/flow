@@ -13,7 +13,11 @@ class FlowServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+	    if ($this->app->runningInConsole()) {
+			$this->publishes([
+        		__DIR__.'/../config/flow.php' => config_path('flow.php'),
+			], 'flow-config');
+		}
     }
 
     /**
